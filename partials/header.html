@@ -1,0 +1,49 @@
+<!-- ============================================================
+     Fragment commun : barre supérieure, bandeau-titre, navigation.
+     Dupliqué dans chaque page (pas de moteur de template).
+     Toute modification doit être répercutée partout — voir CLAUDE.md.
+     L'onglet courant porte la classe « active » sur son .nav-link.
+     ============================================================ -->
+<div class="oli-protobar">Prototype de maquette &mdash; contenus fictifs, images de substitution</div>
+
+<div class="oli-topbar">
+  <div class="container oli-container">
+    <div class="oli-topbar__inner">
+      <span data-oli-date>&nbsp;</span>
+      <span class="d-none d-lg-inline">Le magazine de l&rsquo;innovation appliqu&eacute;e</span>
+      <span class="d-flex gap-3">
+        <a href="kits.html">Recevoir le magazine</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<header class="oli-masthead">
+  <div class="container oli-container">
+    <a href="index.html" class="oli-logo">Open Lab <span>Insight</span></a>
+    <p class="oli-tagline">&Eacute;dition &amp; observatoire de l&rsquo;innovation</p>
+  </div>
+</header>
+
+<div class="oli-nav sticky-top">
+  <div class="container oli-container">
+    <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#oliNav" aria-controls="oliNav" aria-expanded="false" aria-label="Ouvrir le menu">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="oliNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" data-nav="magazine" href="magazine.html">Magazine</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="connect" href="openlab-connect.html">OpenLab Connect</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="entreprises" href="entreprises.html">Entreprises</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="partenaires" href="partenaires.html">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="diffusion" href="points-de-diffusion.html">Points de diffusion</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="kits" href="kits.html">Kits &amp; m&eacute;dias</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

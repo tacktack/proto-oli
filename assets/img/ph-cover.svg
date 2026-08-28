@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1000" width="760" height="1000" role="img" aria-label="COUVERTURE">
+  <rect width="760" height="1000" fill="#eaeaea"/>
+  <g stroke="#cfcfcf" stroke-width="1">
+    <line x1="0" y1="0" x2="760" y2="1000"/>
+    <line x1="760" y1="0" x2="0" y2="1000"/>
+  </g>
+  <rect x="0.5" y="0.5" width="759" height="999" fill="none" stroke="#bdbdbd" stroke-width="1"/>
+  <rect x="270" y="480" width="220" height="40" fill="#eaeaea"/>
+  <text x="50%" y="50%" dy="6" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" letter-spacing="2" fill="#8a8a8a">COUVERTURE</text>
+</svg>

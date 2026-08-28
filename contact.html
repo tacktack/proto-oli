@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Open Lab Insight</title>
+  <meta name="description" content="Contacter la rédaction et l'équipe commerciale d'Open Lab Insight.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- ============================================================
+     Fragment commun : barre supérieure, bandeau-titre, navigation.
+     Dupliqué dans chaque page (pas de moteur de template).
+     Toute modification doit être répercutée partout — voir CLAUDE.md.
+     L'onglet courant porte la classe « active » sur son .nav-link.
+     ============================================================ -->
+<div class="oli-protobar">Prototype de maquette &mdash; contenus fictifs, images de substitution</div>
+
+<div class="oli-topbar">
+  <div class="container oli-container">
+    <div class="oli-topbar__inner">
+      <span data-oli-date>&nbsp;</span>
+      <span class="d-none d-lg-inline">Le magazine de l&rsquo;innovation appliqu&eacute;e</span>
+      <span class="d-flex gap-3">
+        <a href="kits.html">Recevoir le magazine</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<header class="oli-masthead">
+  <div class="container oli-container">
+    <a href="index.html" class="oli-logo">Open Lab <span>Insight</span></a>
+    <p class="oli-tagline">&Eacute;dition &amp; observatoire de l&rsquo;innovation</p>
+  </div>
+</header>
+
+<div class="oli-nav sticky-top">
+  <div class="container oli-container">
+    <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#oliNav" aria-controls="oliNav" aria-expanded="false" aria-label="Ouvrir le menu">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="oliNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" data-nav="magazine" href="magazine.html">Magazine</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="connect" href="openlab-connect.html">OpenLab Connect</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="entreprises" href="entreprises.html">Entreprises</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="partenaires" href="partenaires.html">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="diffusion" href="points-de-diffusion.html">Points de diffusion</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="kits" href="kits.html">Kits &amp; m&eacute;dias</a></li>
+          <li class="nav-item"><a class="nav-link active" data-nav="contact" aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<main id="contenu">
+<div class="container oli-container">
+  <div class="oli-breadcrumb"><a href="index.html">Accueil</a><span class="oli-sep">/</span>Contact</div>
+</div>
+
+<section class="oli-page-head">
+  <div class="container oli-container">
+    <div class="row g-4 g-lg-5 align-items-end">
+      <div class="col-lg-7">
+        <p class="oli-kicker oli-kicker--black">Nous &eacute;crire</p>
+        <h1 class="oli-headline oli-headline--xxl">Contact</h1>
+        <p class="oli-standfirst oli-standfirst--lg" style="max-width:56ch;">
+          Une question sur le magazine, une proposition de sujet, un projet commercial ou un
+          partenariat&nbsp;: &eacute;crivez-nous, nous r&eacute;pondons sous 48&nbsp;heures ouvr&eacute;es.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <div class="oli-edito">
+          <p class="oli-kicker oli-kicker--black mb-2">Nos coordonn&eacute;es</p>
+          <p class="mb-2" style="font-size:.9375rem;">
+            43, rue de l&rsquo;&Icirc;le Napol&eacute;on<br>68170 Rixheim
+          </p>
+          <p class="mb-0" style="font-size:.9375rem;">
+            <a href="mailto:redaction@openlabinsight.io" style="text-decoration:underline;text-underline-offset:3px;">redaction@openlabinsight.io</a><br>
+            <a href="tel:+33671708495">06 71 70 84 95</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oli-section">
+  <div class="container oli-container">
+    <div class="row g-4 g-lg-5">
+
+      <!-- Formulaire -->
+      <div class="col-lg-7">
+        <div class="oli-section-head"><h2>Formulaire de contact</h2></div>
+        <form class="row g-3" data-oli-form novalidate>
+          <div class="col-md-6">
+            <label class="form-label" for="ctPrenom">Pr&eacute;nom <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="ctPrenom" name="prenom" autocomplete="given-name" required>
+            <div class="invalid-feedback">Merci d&rsquo;indiquer votre pr&eacute;nom.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="ctNom">Nom <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="ctNom" name="nom" autocomplete="family-name" required>
+            <div class="invalid-feedback">Merci d&rsquo;indiquer votre nom.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="ctEmail">Adresse e-mail <span aria-hidden="true">*</span></label>
+            <input type="email" class="form-control" id="ctEmail" name="email" autocomplete="email" required>
+            <div class="invalid-feedback">Adresse e-mail invalide.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="ctTel">T&eacute;l&eacute;phone</label>
+            <input type="tel" class="form-control" id="ctTel" name="telephone" autocomplete="tel">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="ctSociete">Organisation</label>
+            <input type="text" class="form-control" id="ctSociete" name="societe" autocomplete="organization">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="ctSujet">Votre demande concerne <span aria-hidden="true">*</span></label>
+            <select class="form-select" id="ctSujet" name="sujet" required>
+              <option value="">Choisir un sujet</option>
+              <option>La r&eacute;daction &mdash; proposition de sujet</option>
+              <option>OpenLab Connect &mdash; d&eacute;monstration</option>
+              <option>Offres entreprises &mdash; publicit&eacute; et contenus</option>
+              <option>Partenariat</option>
+              <option>Devenir point de diffusion</option>
+              <option>Abonnement au magazine papier</option>
+              <option>Autre</option>
+            </select>
+            <div class="invalid-feedback">Merci de choisir un sujet.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="ctMessage">Message <span aria-hidden="true">*</span></label>
+            <textarea class="form-control" id="ctMessage" name="message" rows="7" required
+                      placeholder="D&eacute;crivez votre demande en quelques lignes."></textarea>
+            <div class="invalid-feedback">Merci de d&eacute;tailler votre demande.</div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="ctConsent" name="consentement" required>
+              <label class="form-check-label" for="ctConsent">
+                J&rsquo;accepte que mes donn&eacute;es soient utilis&eacute;es pour traiter ma demande. <span aria-hidden="true">*</span>
+              </label>
+              <div class="invalid-feedback">Ce consentement est n&eacute;cessaire pour nous &eacute;crire.</div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="ctNews" name="newsletter">
+              <label class="form-check-label" for="ctNews">Je souhaite recevoir la newsletter.</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark">Envoyer le message</button>
+            <p class="form-text mt-2 mb-0">
+              Champs marqu&eacute;s d&rsquo;un ast&eacute;risque&nbsp;: obligatoires. Protection anti-robot pr&eacute;vue en int&eacute;gration finale.
+            </p>
+          </div>
+          <div class="col-12">
+            <div class="oli-formnote" data-oli-form-note hidden>
+              <strong>Formulaire valid&eacute;.</strong> Le prototype ne transmet aucun message&nbsp;:
+              l&rsquo;envoi par e-mail et l&rsquo;enregistrement en base sont pr&eacute;vus en int&eacute;gration finale.
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contacts directs -->
+      <aside class="col-lg-5 oli-col-divider">
+        <div class="oli-section-head"><h2>Nous &eacute;crire directement</h2></div>
+        <ul class="oli-list mb-5">
+          <li>
+            <p class="oli-kicker mb-1">R&eacute;daction</p>
+            <p class="mb-0" style="font-size:.9375rem;color:var(--oli-grey-700);">Propositions de sujets, droits de r&eacute;ponse, demandes d&rsquo;interview.</p>
+          </li>
+          <li>
+            <p class="oli-kicker mb-1">Commercial &amp; partenariats</p>
+            <p class="mb-0" style="font-size:.9375rem;color:var(--oli-grey-700);">Publicit&eacute;, contenus partenaires, acc&egrave;s &agrave; OpenLab Connect, institutions et r&eacute;seaux.</p>
+          </li>
+          <li>
+            <p class="oli-kicker mb-1">Diffusion</p>
+            <p class="mb-0" style="font-size:.9375rem;color:var(--oli-grey-700);">Devenir point de diffusion, r&eacute;approvisionnement, envoi postal.</p>
+          </li>
+        </ul>
+        <p class="oli-standfirst mt-0 mb-2">Une seule adresse pour nous joindre, quel que soit votre sujet&nbsp;:</p>
+        <a href="mailto:redaction@openlabinsight.io" class="oli-arrow-link">redaction@openlabinsight.io &rarr;</a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     Fragment commun : pied de page.
+     Dupliqu&eacute; dans chaque page — voir CLAUDE.md.
+     ============================================================ -->
+<footer class="oli-footer">
+  <div class="container oli-container">
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <p class="oli-footer__logo mb-2">Open Lab Insight</p>
+        <p class="mb-4" style="font-size:.875rem;max-width:34ch;">
+          Magazine et observatoire de l&rsquo;innovation appliqu&eacute;e. Une publication trimestrielle,
+          papier et num&eacute;rique, &eacute;dit&eacute;e &agrave; Rixheim, dans le Haut-Rhin.
+        </p>
+        <h3>Newsletter</h3>
+        <p class="mb-3" style="font-size:.875rem;max-width:34ch;">
+          Le sommaire, les articles en acc&egrave;s libre et les rendez-vous de la r&eacute;daction.
+        </p>
+        <a href="#" class="btn btn-light">Inscription &agrave; la newsletter</a>
+        <p class="form-text mt-3 mb-0" style="color:var(--oli-grey-500);max-width:34ch;">
+          Int&eacute;gration Mailchimp (compte Autocycling) pr&eacute;vue hors prototype.
+        </p>
+      </div>
+
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h3>Le magazine</h3>
+        <ul>
+          <li><a href="magazine.html">Tous les articles</a></li>
+          <li><a href="magazine.html">Rubriques</a></li>
+          <li><a href="kits.html">Lire le num&eacute;ro</a></li>
+          <li><a href="kits.html">Recevoir le papier</a></li>
+          <li><a href="points-de-diffusion.html">O&ugrave; nous trouver</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h3>OpenLab Connect</h3>
+        <ul>
+          <li><a href="openlab-connect.html">L&rsquo;offre</a></li>
+          <li><a href="entreprises.html">Pour les entreprises</a></li>
+          <li><a href="partenaires.html">Nos partenaires</a></li>
+          <li><a href="contact.html">Demander une d&eacute;mo</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <h3>Contact</h3>
+        <ul>
+          <li>43, rue de l&rsquo;&Icirc;le Napol&eacute;on<br>68170 Rixheim</li>
+          <li><a href="mailto:redaction@openlabinsight.io">redaction@openlabinsight.io</a></li>
+          <li><a href="tel:+33671708495">06 71 70 84 95</a></li>
+        </ul>
+        <div class="oli-share d-flex gap-2 mt-3">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Flux RSS">RSS</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="oli-footer__bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span data-oli-year>2026</span> Open Lab Insight &mdash; openlabinsight.io</span>
+      <span class="d-flex flex-wrap gap-3">
+        <a href="#">Mentions l&eacute;gales</a>
+        <a href="#">Politique de confidentialit&eacute;</a>
+        <a href="#">Gestion des cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

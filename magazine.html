@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magazine | Open Lab Insight</title>
+  <meta name="description" content="Tous les articles du magazine Open Lab Insight, par rubrique.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- ============================================================
+     Fragment commun : barre supérieure, bandeau-titre, navigation.
+     Dupliqué dans chaque page (pas de moteur de template).
+     Toute modification doit être répercutée partout — voir CLAUDE.md.
+     L'onglet courant porte la classe « active » sur son .nav-link.
+     ============================================================ -->
+<div class="oli-protobar">Prototype de maquette &mdash; contenus fictifs, images de substitution</div>
+
+<div class="oli-topbar">
+  <div class="container oli-container">
+    <div class="oli-topbar__inner">
+      <span data-oli-date>&nbsp;</span>
+      <span class="d-none d-lg-inline">Le magazine de l&rsquo;innovation appliqu&eacute;e</span>
+      <span class="d-flex gap-3">
+        <a href="kits.html">Recevoir le magazine</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<header class="oli-masthead">
+  <div class="container oli-container">
+    <a href="index.html" class="oli-logo">Open Lab <span>Insight</span></a>
+    <p class="oli-tagline">&Eacute;dition &amp; observatoire de l&rsquo;innovation</p>
+  </div>
+</header>
+
+<div class="oli-nav sticky-top">
+  <div class="container oli-container">
+    <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#oliNav" aria-controls="oliNav" aria-expanded="false" aria-label="Ouvrir le menu">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="oliNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" data-nav="magazine" aria-current="page" href="magazine.html">Magazine</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="connect" href="openlab-connect.html">OpenLab Connect</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="entreprises" href="entreprises.html">Entreprises</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="partenaires" href="partenaires.html">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="diffusion" href="points-de-diffusion.html">Points de diffusion</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="kits" href="kits.html">Kits &amp; m&eacute;dias</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<main id="contenu">
+<div class="container oli-container">
+  <div class="oli-breadcrumb"><a href="index.html">Accueil</a><span class="oli-sep">/</span>Magazine</div>
+</div>
+
+<section class="oli-page-head">
+  <div class="container oli-container">
+    <div class="row align-items-end g-4">
+      <div class="col-lg-8">
+        <p class="oli-kicker oli-kicker--black">Le magazine</p>
+        <h1 class="oli-headline oli-headline--xl">Enqu&ecirc;tes, analyses et portraits de l&rsquo;innovation appliqu&eacute;e</h1>
+      </div>
+      <div class="col-lg-4">
+        <p class="oli-standfirst mt-0">
+          Publi&eacute; chaque trimestre en papier, mis &agrave; jour en continu en ligne.
+          Tous les articles sont sign&eacute;s et en acc&egrave;s libre.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Article mis en avant -->
+<section class="oli-section--tight pt-4">
+  <div class="container oli-container">
+    <article class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-7">
+        <a class="oli-card__media mb-0" href="article.html" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/ph-wide.svg" alt="" width="1200" height="675">
+        </a>
+      </div>
+      <div class="col-lg-5">
+        <p class="oli-kicker oli-kicker--black">&Agrave; la une &middot; Enqu&ecirc;te</p>
+        <h2 class="oli-headline oli-headline--xl">
+          <a href="article.html">Ce que l&rsquo;open innovation a vraiment chang&eacute; dans l&rsquo;industrie fran&ccedil;aise</a>
+        </h2>
+        <p class="oli-standfirst oli-standfirst--lg">
+          Trois ans apr&egrave;s la vague des laboratoires ouverts, la moiti&eacute; d&rsquo;entre eux ont ferm&eacute;.
+          Les survivants ont chang&eacute; de m&eacute;thode.
+        </p>
+        <div class="oli-byline d-flex align-items-center gap-2">
+          <span class="oli-avatar" aria-hidden="true">CF</span>
+          <span>Par <strong>Camille Ferrand</strong><span class="oli-sep">&middot;</span>12 min<span class="oli-sep">&middot;</span>Num&eacute;ro 14</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Grille filtrable -->
+<section class="oli-section pt-0">
+  <div class="container oli-container">
+    <div class="oli-section-head">
+      <h2>Tous les articles</h2>
+      <span class="oli-more">Num&eacute;ro 14 &mdash; automne</span>
+    </div>
+
+    <div class="oli-filters mb-4" data-oli-filters="#grilleMagazine" role="group" aria-label="Filtrer par rubrique">
+      <button type="button" class="oli-filter is-active" data-filter="all" aria-pressed="true">Toutes</button>
+      <button type="button" class="oli-filter" data-filter="industrie" aria-pressed="false">Industrie</button>
+      <button type="button" class="oli-filter" data-filter="territoires" aria-pressed="false">Territoires</button>
+      <button type="button" class="oli-filter" data-filter="recherche" aria-pressed="false">Recherche</button>
+      <button type="button" class="oli-filter" data-filter="financement" aria-pressed="false">Financement</button>
+      <button type="button" class="oli-filter" data-filter="portraits" aria-pressed="false">Portraits</button>
+      <button type="button" class="oli-filter" data-filter="data" aria-pressed="false">Data</button>
+    </div>
+
+    <div class="row g-4 g-lg-5" id="grilleMagazine">
+      <div class="col-md-6 col-lg-4" data-rubrique="industrie">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Industrie</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Les usines apprennent &agrave; documenter leurs &eacute;checs</a></h3>
+          <p class="oli-standfirst">Le compte rendu d&rsquo;incident sans sanction s&rsquo;installe dans les ateliers.</p>
+          <p class="oli-byline">Par <strong>Antoine Delcourt</strong><span class="oli-sep">&middot;</span>7 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="territoires">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Territoires</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Villes moyennes&nbsp;: l&rsquo;innovation sans m&eacute;tropole</a></h3>
+          <p class="oli-standfirst">Des &eacute;cosyst&egrave;mes se construisent loin des grands p&ocirc;les urbains.</p>
+          <p class="oli-byline">Par <strong>Julien Osorio</strong><span class="oli-sep">&middot;</span>9 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="recherche">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Recherche</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Le transfert de technologie a-t-il trouv&eacute; son mod&egrave;le&nbsp;?</a></h3>
+          <p class="oli-standfirst">Les structures de valorisation publient enfin des chiffres comparables.</p>
+          <p class="oli-byline">Par <strong>Marc Aubry</strong><span class="oli-sep">&middot;</span>11 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="financement">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Financement</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Subventions&nbsp;: le co&ucirc;t cach&eacute; du dossier</a></h3>
+          <p class="oli-standfirst">23 jours-homme en moyenne pour une PME. Sans garantie de r&eacute;sultat.</p>
+          <p class="oli-byline">Par <strong>Nadia Belkacem</strong><span class="oli-sep">&middot;</span>6 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="portraits">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Portraits</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Celle qui a remis les ing&eacute;nieurs sur la ligne</a></h3>
+          <p class="oli-standfirst">Elle a supprim&eacute; l&rsquo;&eacute;tage des bureaux d&rsquo;&eacute;tudes. Bilan trois ans apr&egrave;s.</p>
+          <p class="oli-byline">Par <strong>Sofia Reinhardt</strong><span class="oli-sep">&middot;</span>10 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="data">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Data</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Les cinq indicateurs qui pr&eacute;disent la survie d&rsquo;un projet</a></h3>
+          <p class="oli-standfirst">212 projets suivis sur quatre ans&nbsp;: ce qui distingue ceux qui aboutissent.</p>
+          <p class="oli-byline">Par <strong>In&egrave;s Bonnet</strong><span class="oli-sep">&middot;</span>8 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="industrie">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Industrie</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Maintenance pr&eacute;dictive&nbsp;: le retour sur investissement en question</a></h3>
+          <p class="oli-standfirst">Les capteurs sont install&eacute;s. Les gains, eux, restent difficiles &agrave; isoler.</p>
+          <p class="oli-byline">Par <strong>Antoine Delcourt</strong><span class="oli-sep">&middot;</span>7 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="territoires">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Territoires</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">&Agrave; Nantes, le laboratoire qui a fait entrer la ville dans ses murs</a></h3>
+          <p class="oli-standfirst">Collectivit&eacute;s, PME et chercheurs partagent 2 000 m&sup2; et les m&ecirc;mes dossiers.</p>
+          <p class="oli-byline">Par <strong>Julien Osorio</strong><span class="oli-sep">&middot;</span>8 min</p></article>
+      </div>
+      <div class="col-md-6 col-lg-4" data-rubrique="recherche">
+        <article class="oli-card"><a class="oli-card__media" href="article.html" tabindex="-1" aria-hidden="true"><img src="assets/img/ph-standard.svg" alt="" width="900" height="675"></a>
+          <p class="oli-kicker">Recherche</p>
+          <h3 class="oli-headline oli-headline--md"><a href="article.html">Le mat&eacute;riau qui remplace le b&eacute;ton sort du laboratoire</a></h3>
+          <p class="oli-standfirst">Apr&egrave;s huit ans d&rsquo;essais, la premi&egrave;re ligne de production entre en service.</p>
+          <p class="oli-byline">Par <strong>Marc Aubry</strong><span class="oli-sep">&middot;</span>9 min</p></article>
+      </div>
+    </div>
+
+    <p class="text-center mt-5 mb-0" data-oli-empty hidden>Aucun article dans cette rubrique pour le moment.</p>
+
+    <nav class="mt-5 pt-4 oli-rule d-flex justify-content-between align-items-center" aria-label="Pagination">
+      <span class="oli-kicker mb-0">Page 1 sur 6</span>
+      <span class="d-flex gap-2">
+        <a href="#" class="btn btn-outline-dark disabled" aria-disabled="true">Pr&eacute;c&eacute;dent</a>
+        <a href="#" class="btn btn-dark">Suivant</a>
+      </span>
+    </nav>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     Fragment commun : pied de page.
+     Dupliqu&eacute; dans chaque page — voir CLAUDE.md.
+     ============================================================ -->
+<footer class="oli-footer">
+  <div class="container oli-container">
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <p class="oli-footer__logo mb-2">Open Lab Insight</p>
+        <p class="mb-4" style="font-size:.875rem;max-width:34ch;">
+          Magazine et observatoire de l&rsquo;innovation appliqu&eacute;e. Une publication trimestrielle,
+          papier et num&eacute;rique, &eacute;dit&eacute;e &agrave; Rixheim, dans le Haut-Rhin.
+        </p>
+        <h3>Newsletter</h3>
+        <p class="mb-3" style="font-size:.875rem;max-width:34ch;">
+          Le sommaire, les articles en acc&egrave;s libre et les rendez-vous de la r&eacute;daction.
+        </p>
+        <a href="#" class="btn btn-light">Inscription &agrave; la newsletter</a>
+        <p class="form-text mt-3 mb-0" style="color:var(--oli-grey-500);max-width:34ch;">
+          Int&eacute;gration Mailchimp (compte Autocycling) pr&eacute;vue hors prototype.
+        </p>
+      </div>
+
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h3>Le magazine</h3>
+        <ul>
+          <li><a href="magazine.html">Tous les articles</a></li>
+          <li><a href="magazine.html">Rubriques</a></li>
+          <li><a href="kits.html">Lire le num&eacute;ro</a></li>
+          <li><a href="kits.html">Recevoir le papier</a></li>
+          <li><a href="points-de-diffusion.html">O&ugrave; nous trouver</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h3>OpenLab Connect</h3>
+        <ul>
+          <li><a href="openlab-connect.html">L&rsquo;offre</a></li>
+          <li><a href="entreprises.html">Pour les entreprises</a></li>
+          <li><a href="partenaires.html">Nos partenaires</a></li>
+          <li><a href="contact.html">Demander une d&eacute;mo</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <h3>Contact</h3>
+        <ul>
+          <li>43, rue de l&rsquo;&Icirc;le Napol&eacute;on<br>68170 Rixheim</li>
+          <li><a href="mailto:redaction@openlabinsight.io">redaction@openlabinsight.io</a></li>
+          <li><a href="tel:+33671708495">06 71 70 84 95</a></li>
+        </ul>
+        <div class="oli-share d-flex gap-2 mt-3">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Flux RSS">RSS</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="oli-footer__bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span data-oli-year>2026</span> Open Lab Insight &mdash; openlabinsight.io</span>
+      <span class="d-flex flex-wrap gap-3">
+        <a href="#">Mentions l&eacute;gales</a>
+        <a href="#">Politique de confidentialit&eacute;</a>
+        <a href="#">Gestion des cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

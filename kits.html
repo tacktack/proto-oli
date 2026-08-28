@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kits & médias | Open Lab Insight</title>
+  <meta name="description" content="Numéro en PDF, lecteur interactif, kits téléchargeables et réception du magazine papier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- ============================================================
+     Fragment commun : barre supérieure, bandeau-titre, navigation.
+     Dupliqué dans chaque page (pas de moteur de template).
+     Toute modification doit être répercutée partout — voir CLAUDE.md.
+     L'onglet courant porte la classe « active » sur son .nav-link.
+     ============================================================ -->
+<div class="oli-protobar">Prototype de maquette &mdash; contenus fictifs, images de substitution</div>
+
+<div class="oli-topbar">
+  <div class="container oli-container">
+    <div class="oli-topbar__inner">
+      <span data-oli-date>&nbsp;</span>
+      <span class="d-none d-lg-inline">Le magazine de l&rsquo;innovation appliqu&eacute;e</span>
+      <span class="d-flex gap-3">
+        <a href="kits.html">Recevoir le magazine</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<header class="oli-masthead">
+  <div class="container oli-container">
+    <a href="index.html" class="oli-logo">Open Lab <span>Insight</span></a>
+    <p class="oli-tagline">&Eacute;dition &amp; observatoire de l&rsquo;innovation</p>
+  </div>
+</header>
+
+<div class="oli-nav sticky-top">
+  <div class="container oli-container">
+    <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#oliNav" aria-controls="oliNav" aria-expanded="false" aria-label="Ouvrir le menu">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="oliNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" data-nav="magazine" href="magazine.html">Magazine</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="connect" href="openlab-connect.html">OpenLab Connect</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="entreprises" href="entreprises.html">Entreprises</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="partenaires" href="partenaires.html">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="diffusion" href="points-de-diffusion.html">Points de diffusion</a></li>
+          <li class="nav-item"><a class="nav-link active" data-nav="kits" aria-current="page" href="kits.html">Kits &amp; m&eacute;dias</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<main id="contenu">
+<div class="container oli-container">
+  <div class="oli-breadcrumb"><a href="index.html">Accueil</a><span class="oli-sep">/</span>Kits &amp; m&eacute;dias</div>
+</div>
+
+<section class="oli-page-head">
+  <div class="container oli-container">
+    <div class="row g-4 g-lg-5 align-items-end">
+      <div class="col-lg-7">
+        <p class="oli-kicker oli-kicker--black">T&eacute;l&eacute;chargements</p>
+        <h1 class="oli-headline oli-headline--xxl">Lire, t&eacute;l&eacute;charger, recevoir</h1>
+        <p class="oli-standfirst oli-standfirst--lg" style="max-width:58ch;">
+          Le num&eacute;ro en cours en PDF et dans le lecteur interactif, les kits &agrave; destination de la
+          presse et des partenaires, et l&rsquo;inscription &agrave; l&rsquo;envoi gratuit du magazine papier.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <ul class="oli-list">
+          <li><a href="#numero" class="oli-arrow-link">Le num&eacute;ro 14 &rarr;</a></li>
+          <li><a href="#kits" class="oli-arrow-link">Kits t&eacute;l&eacute;chargeables &rarr;</a></li>
+          <li><a href="#adresse" class="oli-arrow-link">Recevoir le magazine papier &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LE NUMÉRO EN COURS ====================== -->
+<section class="oli-section" id="numero">
+  <div class="container oli-container">
+    <div class="oli-section-head">
+      <h2>Num&eacute;ro 14 &mdash; automne</h2>
+      <span class="oli-more">84 pages &middot; trimestriel</span>
+    </div>
+    <div class="row g-4 g-lg-5">
+      <div class="col-md-5 col-lg-4">
+        <img src="assets/img/ph-cover.svg" alt="Couverture du num&eacute;ro 14 (image de substitution)"
+             width="760" height="1000" style="border:1px solid var(--oli-grey-200);">
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <p class="oli-kicker">Dossier</p>
+        <h3 class="oli-headline oli-headline--lg mb-3">M&eacute;thodes&nbsp;: ce qui marche vraiment</h3>
+        <p class="oli-standfirst mt-0 mb-4" style="max-width:60ch;">
+          Enqu&ecirc;te sur 340 laboratoires ouverts, portraits de dirigeants, cartographie r&eacute;gionale
+          et analyse des dispositifs de financement.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="#" class="btn btn-dark" aria-describedby="pdfNote">T&eacute;l&eacute;charger le PDF</a>
+          <a href="#lecteur" class="btn btn-outline-dark">Lire dans le navigateur</a>
+        </div>
+        <p id="pdfNote" class="mb-4" style="font-size:.8125rem;color:var(--oli-grey-500);">
+          Lien inactif dans le prototype. En production&nbsp;: fichier PDF du num&eacute;ro complet, servi
+          en t&eacute;l&eacute;chargement direct, avec comptage des t&eacute;l&eacute;chargements.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-6 col-lg-3"><p class="oli-stat__value">84</p><p class="oli-stat__label">Pages</p></div>
+          <div class="col-6 col-lg-3"><p class="oli-stat__value">12</p><p class="oli-stat__label">Articles</p></div>
+          <div class="col-6 col-lg-3"><p class="oli-stat__value">6</p><p class="oli-stat__label">Rubriques</p></div>
+          <div class="col-6 col-lg-3"><p class="oli-stat__value">24 000</p><p class="oli-stat__label">Exemplaires</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LECTEUR ISSUU =========================== -->
+<section class="oli-section pt-0" id="lecteur">
+  <div class="container oli-container">
+    <div class="oli-section-head"><h2>Lecteur interactif</h2></div>
+    <div class="oli-integration oli-integration--ratio oli-ratio-16x9">
+      <span class="oli-integration__tag">Hors prototype</span>
+      <h3>Emplacement du lecteur flipbook Issuu</h3>
+      <p>
+        Le num&eacute;ro complet sera feuilletable ici via l&rsquo;embarquement Issuu
+        (<code>&lt;iframe&gt;</code> responsive, plein &eacute;cran et partage).
+        L&rsquo;abonnement Issuu est &agrave; la charge du client&nbsp;; l&rsquo;identifiant de publication
+        sera renseign&eacute; au moment de l&rsquo;int&eacute;gration.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ANCIENS NUMÉROS ========================= -->
+<section class="oli-section pt-0">
+  <div class="container oli-container">
+    <div class="oli-section-head">
+      <h2>Num&eacute;ros pr&eacute;c&eacute;dents</h2>
+      <a class="oli-more" href="#">Toutes les archives</a>
+    </div>
+    <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-5">
+      <div class="col">
+        <a href="#"><img src="assets/img/ph-cover.svg" alt="Couverture du num&eacute;ro 13" width="760" height="1000" style="border:1px solid var(--oli-grey-200);"></a>
+        <p class="oli-kicker mt-2 mb-0">N&deg;&nbsp;13 &middot; &Eacute;t&eacute;</p>
+        <p class="oli-byline mt-1">Territoires</p>
+      </div>
+      <div class="col">
+        <a href="#"><img src="assets/img/ph-cover.svg" alt="Couverture du num&eacute;ro 12" width="760" height="1000" style="border:1px solid var(--oli-grey-200);"></a>
+        <p class="oli-kicker mt-2 mb-0">N&deg;&nbsp;12 &middot; Printemps</p>
+        <p class="oli-byline mt-1">Financement</p>
+      </div>
+      <div class="col">
+        <a href="#"><img src="assets/img/ph-cover.svg" alt="Couverture du num&eacute;ro 11" width="760" height="1000" style="border:1px solid var(--oli-grey-200);"></a>
+        <p class="oli-kicker mt-2 mb-0">N&deg;&nbsp;11 &middot; Hiver</p>
+        <p class="oli-byline mt-1">Mat&eacute;riaux</p>
+      </div>
+      <div class="col">
+        <a href="#"><img src="assets/img/ph-cover.svg" alt="Couverture du num&eacute;ro 10" width="760" height="1000" style="border:1px solid var(--oli-grey-200);"></a>
+        <p class="oli-kicker mt-2 mb-0">N&deg;&nbsp;10 &middot; Automne</p>
+        <p class="oli-byline mt-1">Comp&eacute;tences</p>
+      </div>
+      <div class="col">
+        <a href="#"><img src="assets/img/ph-cover.svg" alt="Couverture du num&eacute;ro 9" width="760" height="1000" style="border:1px solid var(--oli-grey-200);"></a>
+        <p class="oli-kicker mt-2 mb-0">N&deg;&nbsp;9 &middot; &Eacute;t&eacute;</p>
+        <p class="oli-byline mt-1">&Eacute;nergie</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KITS TÉLÉCHARGEABLES ==================== -->
+<section class="oli-section oli-band-grey" id="kits">
+  <div class="container oli-container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <div class="oli-section-head"><h2>Kits t&eacute;l&eacute;chargeables</h2></div>
+        <p class="oli-standfirst mt-0">
+          &Agrave; destination de la presse, des partenaires et des annonceurs. Les fichiers d&eacute;finitifs
+          seront d&eacute;pos&eacute;s lors de l&rsquo;int&eacute;gration&nbsp;; les liens ci-contre sont inactifs.
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <div class="oli-file">
+          <span class="oli-file__ext" aria-hidden="true">PDF</span>
+          <div class="flex-grow-1">
+            <h3 class="oli-headline oli-headline--md mb-1"><a href="#">Kit m&eacute;dia 2026</a></h3>
+            <p class="mb-1" style="font-size:.9375rem;color:var(--oli-grey-700);">Audience, formats publicitaires, calendrier de parution et tarifs.</p>
+            <p class="oli-file__meta mb-0">PDF &middot; 2,4 Mo &middot; 18 pages</p>
+          </div>
+          <a href="#" class="btn btn-outline-dark">T&eacute;l&eacute;charger</a>
+        </div>
+
+        <div class="oli-file">
+          <span class="oli-file__ext" aria-hidden="true">PDF</span>
+          <div class="flex-grow-1">
+            <h3 class="oli-headline oli-headline--md mb-1"><a href="#">Dossier de partenariat</a></h3>
+            <p class="mb-1" style="font-size:.9375rem;color:var(--oli-grey-700);">Modalit&eacute;s, contreparties et charte d&rsquo;ind&eacute;pendance &eacute;ditoriale.</p>
+            <p class="oli-file__meta mb-0">PDF &middot; 1,1 Mo &middot; 12 pages</p>
+          </div>
+          <a href="#" class="btn btn-outline-dark">T&eacute;l&eacute;charger</a>
+        </div>
+
+        <div class="oli-file">
+          <span class="oli-file__ext" aria-hidden="true">ZIP</span>
+          <div class="flex-grow-1">
+            <h3 class="oli-headline oli-headline--md mb-1"><a href="#">Logotypes Open Lab Insight</a></h3>
+            <p class="mb-1" style="font-size:.9375rem;color:var(--oli-grey-700);">SVG, PNG et EPS, versions positive et n&eacute;gative.</p>
+            <p class="oli-file__meta mb-0">ZIP &middot; 6,8 Mo</p>
+          </div>
+          <a href="#" class="btn btn-outline-dark">T&eacute;l&eacute;charger</a>
+        </div>
+
+        <div class="oli-file">
+          <span class="oli-file__ext" aria-hidden="true">PDF</span>
+          <div class="flex-grow-1">
+            <h3 class="oli-headline oli-headline--md mb-1"><a href="#">Charte graphique</a></h3>
+            <p class="mb-1" style="font-size:.9375rem;color:var(--oli-grey-700);">Usages du logotype, typographies et r&egrave;gles de mise en page.</p>
+            <p class="oli-file__meta mb-0">PDF &middot; 3,2 Mo &middot; 24 pages</p>
+          </div>
+          <a href="#" class="btn btn-outline-dark">T&eacute;l&eacute;charger</a>
+        </div>
+
+        <div class="oli-file">
+          <span class="oli-file__ext" aria-hidden="true">PDF</span>
+          <div class="flex-grow-1">
+            <h3 class="oli-headline oli-headline--md mb-1"><a href="#">Num&eacute;ro 14 &mdash; version compl&egrave;te</a></h3>
+            <p class="mb-1" style="font-size:.9375rem;color:var(--oli-grey-700);">Le magazine int&eacute;gral, en basse d&eacute;finition pour la lecture &eacute;cran.</p>
+            <p class="oli-file__meta mb-0">PDF &middot; 14,6 Mo &middot; 84 pages</p>
+          </div>
+          <a href="#" class="btn btn-dark">T&eacute;l&eacute;charger</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADRESSE POSTALE ========================= -->
+<section class="oli-section" id="adresse">
+  <div class="container oli-container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5">
+        <div class="oli-section-head"><h2>Recevoir le magazine papier</h2></div>
+        <p class="oli-standfirst mt-0 mb-4">
+          L&rsquo;envoi est gratuit, en France m&eacute;tropolitaine, &agrave; chaque parution. Vous pouvez
+          interrompre l&rsquo;envoi &agrave; tout moment sur simple demande.
+        </p>
+        <div class="oli-edito">
+          <p class="oli-kicker oli-kicker--black mb-2">Ce qui est attendu en production</p>
+          <p class="mb-0" style="font-size:.875rem;color:var(--oli-grey-700);">
+            Enregistrement des adresses en base, contr&ocirc;le anti-robot, export du fichier de routage
+            pour l&rsquo;imprimeur et gestion des d&eacute;sinscriptions depuis le back-office.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-7 oli-col-divider">
+        <form class="row g-3" data-oli-form novalidate>
+          <div class="col-md-6">
+            <label class="form-label" for="advCivilite">Civilit&eacute;</label>
+            <select class="form-select" id="advCivilite" name="civilite">
+              <option value="">&mdash;</option>
+              <option>Madame</option>
+              <option>Monsieur</option>
+              <option>Non pr&eacute;cis&eacute;</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="advSociete">Organisation</label>
+            <input type="text" class="form-control" id="advSociete" name="societe" autocomplete="organization">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="advPrenom">Pr&eacute;nom <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="advPrenom" name="prenom" autocomplete="given-name" required>
+            <div class="invalid-feedback">Merci d&rsquo;indiquer votre pr&eacute;nom.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="advNom">Nom <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="advNom" name="nom" autocomplete="family-name" required>
+            <div class="invalid-feedback">Merci d&rsquo;indiquer votre nom.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="advAdresse">Adresse <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="advAdresse" name="adresse" autocomplete="address-line1"
+                   placeholder="Num&eacute;ro et voie" required>
+            <div class="invalid-feedback">Merci d&rsquo;indiquer votre adresse.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="advComplement">Compl&eacute;ment d&rsquo;adresse</label>
+            <input type="text" class="form-control" id="advComplement" name="complement" autocomplete="address-line2"
+                   placeholder="B&acirc;timent, &eacute;tage, service&hellip;">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="advCp">Code postal <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="advCp" name="cp" inputmode="numeric"
+                   pattern="[0-9]{5}" autocomplete="postal-code" required>
+            <div class="invalid-feedback">Cinq chiffres attendus.</div>
+          </div>
+          <div class="col-md-8">
+            <label class="form-label" for="advVille">Ville <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="advVille" name="ville" autocomplete="address-level2" required>
+            <div class="invalid-feedback">Merci d&rsquo;indiquer votre ville.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="advEmail">Adresse e-mail <span aria-hidden="true">*</span></label>
+            <input type="email" class="form-control" id="advEmail" name="email" autocomplete="email" required>
+            <div class="form-text">Utilis&eacute;e uniquement pour vous pr&eacute;venir de l&rsquo;envoi.</div>
+            <div class="invalid-feedback">Adresse e-mail invalide.</div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="advConsent" name="consentement" required>
+              <label class="form-check-label" for="advConsent">
+                J&rsquo;accepte que mon adresse soit utilis&eacute;e pour l&rsquo;envoi du magazine. <span aria-hidden="true">*</span>
+              </label>
+              <div class="invalid-feedback">Ce consentement est n&eacute;cessaire pour l&rsquo;envoi.</div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="advNews" name="newsletter">
+              <label class="form-check-label" for="advNews">Je souhaite aussi recevoir la newsletter.</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark">Recevoir le magazine</button>
+            <p class="form-text mt-2 mb-0">Champs marqu&eacute;s d&rsquo;un ast&eacute;risque&nbsp;: obligatoires.</p>
+          </div>
+          <div class="col-12">
+            <div class="oli-formnote" data-oli-form-note hidden>
+              <strong>Formulaire valid&eacute;.</strong> Le prototype n&rsquo;enregistre ni n&rsquo;envoie aucune donn&eacute;e&nbsp;:
+              l&rsquo;&eacute;criture en base et l&rsquo;export de routage sont pr&eacute;vus en int&eacute;gration finale.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ============================== -->
+<section class="oli-band-dark oli-section" id="newsletter">
+  <div class="container oli-container">
+    <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-7">
+        <p class="oli-kicker oli-kicker--light">Newsletter</p>
+        <h2 class="oli-headline oli-headline--xl mb-3">Un e-mail &agrave; chaque num&eacute;ro</h2>
+        <p class="mb-0" style="max-width:56ch;">
+          Le sommaire, les articles en acc&egrave;s libre et les rendez-vous de la r&eacute;daction.
+          Pas de partage de votre adresse, d&eacute;sinscription en un clic.
+        </p>
+      </div>
+      <div class="col-lg-5 text-lg-end">
+        <a href="#" class="btn btn-light">Inscription &agrave; la newsletter</a>
+        <p class="form-text mt-3 mb-0" style="color:var(--oli-grey-500);">
+          Int&eacute;gration Mailchimp (compte Autocycling) pr&eacute;vue hors prototype.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RÉCAPITULATIF INTÉGRATIONS ============== -->
+<section class="oli-section">
+  <div class="container oli-container">
+    <div class="oli-section-head">
+      <h2>Fonctionnalit&eacute;s attendues en int&eacute;gration finale</h2>
+      <span class="oli-more">Hors p&eacute;rim&egrave;tre du prototype</span>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="oli-feature"><h3>PDF du num&eacute;ro</h3>
+          <p>D&eacute;p&ocirc;t du fichier depuis le back-office, t&eacute;l&eacute;chargement direct et comptage.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="oli-feature"><h3>Lecteur Issuu</h3>
+          <p>Embarquement du flipbook interactif. Abonnement Issuu &agrave; la charge du client.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="oli-feature"><h3>Collecte d&rsquo;adresses</h3>
+          <p>Enregistrement en base, anti-robot, export du fichier de routage pour l&rsquo;imprimeur.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="oli-feature"><h3>Newsletter Mailchimp</h3>
+          <p>Connexion &agrave; l&rsquo;audience du compte Autocycling et double opt-in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     Fragment commun : pied de page.
+     Dupliqu&eacute; dans chaque page — voir CLAUDE.md.
+     ============================================================ -->
+<footer class="oli-footer">
+  <div class="container oli-container">
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <p class="oli-footer__logo mb-2">Open Lab Insight</p>
+        <p class="mb-4" style="font-size:.875rem;max-width:34ch;">
+          Magazine et observatoire de l&rsquo;innovation appliqu&eacute;e. Une publication trimestrielle,
+          papier et num&eacute;rique, &eacute;dit&eacute;e &agrave; Rixheim, dans le Haut-Rhin.
+        </p>
+        <h3>Newsletter</h3>
+        <p class="mb-3" style="font-size:.875rem;max-width:34ch;">
+          Le sommaire, les articles en acc&egrave;s libre et les rendez-vous de la r&eacute;daction.
+        </p>
+        <a href="#" class="btn btn-light">Inscription &agrave; la newsletter</a>
+        <p class="form-text mt-3 mb-0" style="color:var(--oli-grey-500);max-width:34ch;">
+          Int&eacute;gration Mailchimp (compte Autocycling) pr&eacute;vue hors prototype.
+        </p>
+      </div>
+
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h3>Le magazine</h3>
+        <ul>
+          <li><a href="magazine.html">Tous les articles</a></li>
+          <li><a href="magazine.html">Rubriques</a></li>
+          <li><a href="kits.html">Lire le num&eacute;ro</a></li>
+          <li><a href="kits.html">Recevoir le papier</a></li>
+          <li><a href="points-de-diffusion.html">O&ugrave; nous trouver</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h3>OpenLab Connect</h3>
+        <ul>
+          <li><a href="openlab-connect.html">L&rsquo;offre</a></li>
+          <li><a href="entreprises.html">Pour les entreprises</a></li>
+          <li><a href="partenaires.html">Nos partenaires</a></li>
+          <li><a href="contact.html">Demander une d&eacute;mo</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <h3>Contact</h3>
+        <ul>
+          <li>43, rue de l&rsquo;&Icirc;le Napol&eacute;on<br>68170 Rixheim</li>
+          <li><a href="mailto:redaction@openlabinsight.io">redaction@openlabinsight.io</a></li>
+          <li><a href="tel:+33671708495">06 71 70 84 95</a></li>
+        </ul>
+        <div class="oli-share d-flex gap-2 mt-3">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Flux RSS">RSS</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="oli-footer__bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span data-oli-year>2026</span> Open Lab Insight &mdash; openlabinsight.io</span>
+      <span class="d-flex flex-wrap gap-3">
+        <a href="#">Mentions l&eacute;gales</a>
+        <a href="#">Politique de confidentialit&eacute;</a>
+        <a href="#">Gestion des cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="PLACEHOLDER 1:1">
+  <rect width="800" height="800" fill="#eaeaea"/>
+  <g stroke="#cfcfcf" stroke-width="1">
+    <line x1="0" y1="0" x2="800" y2="800"/>
+    <line x1="800" y1="0" x2="0" y2="800"/>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="799" fill="none" stroke="#bdbdbd" stroke-width="1"/>
+  <rect x="290" y="380" width="220" height="40" fill="#eaeaea"/>
+  <text x="50%" y="50%" dy="6" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" letter-spacing="2" fill="#8a8a8a">PLACEHOLDER 1:1</text>
+</svg>
