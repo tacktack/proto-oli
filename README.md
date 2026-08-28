@@ -6,6 +6,8 @@ l'offre OpenLab Connect et espace magazine dans un esprit rédactionnel proche d
 
 Palette strictement noir / blanc / gris. Contenus et images de substitution (aucune donnée réelle).
 
+**Voir le prototype en ligne : [tacktack.github.io/proto-oli](https://tacktack.github.io/proto-oli/)**
+
 ## Lancer le prototype
 
 Aucune étape de build. Servir le dossier en HTTP (évite les soucis de chemins relatifs) :
