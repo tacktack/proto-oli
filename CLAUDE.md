@@ -47,6 +47,8 @@ assets/css/         style.css = seule feuille custom
 assets/js/          main.js = JS d'appoint (init tooltips, petites interactions)
 assets/img/
 partials/           fragments HTML réutilisables (header, footer) — copiés à la main
+content/            contenus rédactionnels en Markdown, à reporter manuellement dans le HTML
+                    (voir content/README.md pour les conventions) — non branché au site
 ```
 
 - Chemins **relatifs** partout (`assets/css/style.css`), jamais absolus (`/assets/...`) : le proto
