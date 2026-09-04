@@ -368,7 +368,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 .oli-article__body a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
 .oli-quote {
-  border-top: var(--oli-rule-heavy);
+  border-top: 3px solid var(--oli-cyan);
   border-bottom: var(--oli-rule);
   padding: 1.25rem 0;
   margin: 2rem 0;
