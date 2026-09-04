@@ -454,8 +454,8 @@ figcaption {
   background: transparent;
 }
 .btn-outline-dark:hover { background: var(--oli-gradient-accent); color: var(--oli-white); }
-.btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-black); }
-.btn-light:hover { background: var(--oli-grey-200); border-color: var(--oli-grey-200); color: var(--oli-black); }
+.btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-violet); }
+.btn-light:hover { background: var(--oli-grey-200); border-color: var(--oli-grey-200); color: var(--oli-violet); }
 .btn-outline-light:hover { color: var(--oli-black); }
 
 .oli-arrow-link {
