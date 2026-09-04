@@ -409,7 +409,6 @@ figcaption {
 .oli-share a:hover { background: var(--oli-black); color: var(--oli-white); border-color: var(--oli-black); }
 
 .oli-share--light a { border-color: var(--oli-white); color: var(--oli-white); }
-.oli-share--light a:hover { background: var(--oli-white); color: var(--oli-violet); border-color: var(--oli-white); }
 
 /* ----------------------------------------------------- Bandes noires ----- */
 
@@ -663,6 +662,12 @@ figcaption {
 .oli-footer { background: var(--oli-gradient-accent-dark); color: var(--oli-white); font-family: var(--oli-display); padding: 3.5rem 0 0; margin-top: 0; }
 .oli-footer a:not(.btn) { color: var(--oli-white); }
 .oli-footer a:not(.btn):hover { color: var(--oli-white); text-decoration: underline; text-underline-offset: 3px; }
+.oli-footer .oli-share--light a:hover {
+  background: var(--oli-white);
+  color: var(--oli-violet);
+  border-color: var(--oli-white);
+  text-decoration: none;
+}
 .oli-footer h3 {
   font-size: .6875rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
   color: var(--oli-white); margin: 0 0 1rem;
