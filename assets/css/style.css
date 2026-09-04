@@ -1,7 +1,9 @@
 /* ==========================================================================
    Open Lab Insight — prototype
-   Palette : blanc, noir, gris + accent (bleu #23458A, cyan/violet en dégradé
-   pour les temps forts). Surcharge des variables Bootstrap 5 (voir CLAUDE.md).
+   Palette : blanc, noir, gris + violet comme accent de marque dominant.
+   Dégradé cyan→violet pour les temps forts éditoriaux, dégradé violet→bleu
+   pour les éléments interactifs et structurels (boutons, filets, nav, topbar,
+   footer). Surcharge des variables Bootstrap 5 (voir CLAUDE.md).
    ========================================================================== */
 
 :root {
@@ -18,12 +20,16 @@
   --oli-white:     #ffffff;
 
   /* Accent de marque */
-  --oli-accent:       #23458A;
-  --oli-accent-dark:  #172e5c;
   --oli-cyan:         #00CDCA;
   --oli-violet:       #8454F9;
-  --oli-gradient:     linear-gradient(135deg, var(--oli-cyan), var(--oli-violet));
-  --oli-gradient-deep: linear-gradient(135deg, color-mix(in srgb, var(--oli-cyan) 55%, black), color-mix(in srgb, var(--oli-violet) 55%, black));
+  --oli-blue:         #23458A;
+  --oli-accent:       var(--oli-violet);
+  --oli-accent-dark:  #6a3fd1;
+  --oli-gradient:            linear-gradient(135deg, var(--oli-cyan), var(--oli-violet));
+  --oli-gradient-deep:       linear-gradient(135deg, color-mix(in srgb, var(--oli-cyan) 55%, black), color-mix(in srgb, var(--oli-violet) 55%, black));
+  --oli-gradient-accent:     linear-gradient(135deg, var(--oli-violet), var(--oli-blue));
+  --oli-gradient-accent-dark: linear-gradient(135deg, #6a3fd1, #1a3569);
+  --oli-gradient-accent-h:   linear-gradient(90deg, var(--oli-violet), var(--oli-blue));
 
   --oli-display: "Rethink Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --oli-body:    "Spectral", Georgia, "Times New Roman", serif;
@@ -45,7 +51,7 @@
   --bs-primary: var(--oli-accent);
   --bs-link-color: var(--oli-ink);
   --bs-link-hover-color: var(--oli-accent);
-  --bs-focus-ring-color: rgba(35, 69, 138, .25);
+  --bs-focus-ring-color: rgba(132, 84, 249, .25);
 }
 
 /* --------------------------------------------------------- Base ---------- */
@@ -78,7 +84,7 @@ img { max-width: 100%; height: auto; display: block; }
 .oli-display { font-family: var(--oli-display); }
 
 .oli-kicker {
-  font-family: var(--oli-body);
+  font-family: var(--oli-display);
   font-size: .6875rem;
   font-weight: 600;
   letter-spacing: .14em;
@@ -94,7 +100,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -.015em;
-  color: var(--oli-black);
+  color: var(--oli-violet);
   margin: 0;
   text-wrap: balance;
 }
@@ -157,7 +163,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 
 .oli-rule       { border-top: var(--oli-rule); }
 .oli-rule-dark  { border-top: var(--oli-rule-dark); }
-.oli-rule-heavy { border-top: var(--oli-rule-heavy); }
+.oli-rule-heavy { border-top: var(--oli-rule-heavy); border-image: var(--oli-gradient-accent-h) 1; }
 
 .oli-section {
   padding: 3.25rem 0;
@@ -166,6 +172,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 
 .oli-section-head {
   border-top: var(--oli-rule-heavy);
+  border-image: var(--oli-gradient-accent-h) 1;
   padding-top: .625rem;
   margin-bottom: 1.75rem;
   display: flex;
@@ -199,13 +206,17 @@ a:hover .oli-headline, .oli-headline a:hover {
 /* ------------------------------------------------------- En-tête --------- */
 
 .oli-topbar {
-  background: var(--oli-black);
-  color: var(--oli-grey-300);
+  background: var(--oli-gradient-accent-dark);
+  color: var(--oli-white);
+  font-family: var(--oli-display);
   font-size: .6875rem;
   letter-spacing: .08em;
   text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 1031;
 }
-.oli-topbar a { color: var(--oli-grey-300); }
+.oli-topbar a { color: var(--oli-white); }
 .oli-topbar a:hover { color: var(--oli-white); text-decoration: underline; text-underline-offset: 3px; }
 .oli-topbar .oli-topbar__inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -214,22 +225,22 @@ a:hover .oli-headline, .oli-headline a:hover {
 
 .oli-masthead { padding: 1.5rem 0 1.125rem; text-align: center; }
 .oli-logo { display: inline-block; }
-.oli-logo__img { height: clamp(34px, 4.4vw, 46px); width: auto; display: block; }
-.oli-tagline {
-  font-size: .6875rem;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--oli-grey-500);
-  margin: .625rem 0 0;
-}
+.oli-logo__img { height: clamp(68px, 8.8vw, 92px); width: auto; display: block; }
 
 .oli-nav {
   border-top: var(--oli-rule-dark);
-  border-bottom: var(--oli-rule-heavy);
   background: var(--oli-white);
+  position: sticky;
+  top: 34px;
+  z-index: 1020;
+}
+.oli-nav::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px;
+  height: 3px; background: var(--oli-gradient-accent-h);
 }
 .oli-nav .navbar { padding: 0; }
 .oli-nav .nav-link {
+  font-family: var(--oli-display);
   font-size: .8125rem;
   font-weight: 600;
   letter-spacing: .06em;
@@ -242,7 +253,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 .oli-nav .nav-link:hover { color: var(--oli-accent); }
 .oli-nav .nav-link::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -1px;
-  height: 3px; background: var(--oli-accent);
+  height: 3px; background: var(--oli-gradient-accent-h);
   transform: scaleX(0); transform-origin: left; transition: transform .18s ease;
 }
 .oli-nav .nav-link:hover::after,
@@ -250,6 +261,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 .oli-nav .nav-link.active { color: var(--oli-accent); }
 
 .oli-nav .navbar-toggler {
+  font-family: var(--oli-display);
   border: var(--oli-rule-dark);
   padding: .375rem .625rem;
   font-size: .75rem;
@@ -282,7 +294,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 
 /* Le fil : items numérotés */
 .oli-fil { counter-reset: fil; }
-.oli-fil__item { position: relative; padding-top: .875rem; border-top: var(--oli-rule-heavy); }
+.oli-fil__item { position: relative; padding-top: .875rem; border-top: var(--oli-rule-heavy); border-image: var(--oli-gradient-accent-h) 1; }
 .oli-fil__num {
   font-family: var(--oli-display);
   font-size: 1.75rem;
@@ -412,9 +424,9 @@ figcaption {
 
 /* --------------------------------------------------------- Boutons ------- */
 
-.btn { border-radius: 0; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .75rem; padding: .8125rem 1.5rem; }
-.btn-dark { background: var(--oli-accent); border-color: var(--oli-accent); }
-.btn-dark:hover { background: var(--oli-accent-dark); border-color: var(--oli-accent-dark); }
+.btn { font-family: var(--oli-display); border-radius: 0; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .75rem; padding: .8125rem 1.5rem; }
+.btn-dark { background: var(--oli-gradient-accent); border-color: transparent; }
+.btn-dark:hover { background: var(--oli-gradient-accent-dark); border-color: transparent; }
 .btn-outline-dark { border-color: var(--oli-black); color: var(--oli-black); }
 .btn-outline-dark:hover { background: var(--oli-black); color: var(--oli-white); }
 .btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-black); }
@@ -435,6 +447,7 @@ figcaption {
 
 .oli-filters { display: flex; flex-wrap: wrap; gap: .5rem; }
 .oli-filter {
+  font-family: var(--oli-display);
   font-size: .6875rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   padding: .5rem .875rem;
   border: var(--oli-rule-dark);
@@ -443,7 +456,7 @@ figcaption {
   cursor: pointer;
 }
 .oli-filter:hover { border-color: var(--oli-accent); color: var(--oli-accent); }
-.oli-filter.is-active { background: var(--oli-accent); border-color: var(--oli-accent); color: var(--oli-white); }
+.oli-filter.is-active { background: var(--oli-gradient-accent); border-color: transparent; color: var(--oli-white); }
 
 /* ----------------------------------------------- Zones d'intégration ----- */
 /* Fonctionnalités attendues en intégration finale — hors périmètre du proto */
@@ -559,7 +572,7 @@ figcaption {
   color: var(--oli-grey-300); display: block; margin-bottom: .75rem;
 }
 
-.oli-feature { border-top: var(--oli-rule-heavy); padding-top: 1rem; height: 100%; }
+.oli-feature { border-top: var(--oli-rule-heavy); border-image: var(--oli-gradient-accent-h) 1; padding-top: 1rem; height: 100%; }
 .oli-feature h3 { font-family: var(--oli-display); font-size: 1.125rem; font-weight: 700; margin: 0 0 .5rem; }
 .oli-feature p { font-size: .9375rem; color: var(--oli-grey-700); margin: 0; }
 
@@ -609,12 +622,12 @@ figcaption {
 .oli-breadcrumb .oli-sep { margin: 0 .5rem; color: var(--oli-grey-300); }
 
 /* En-tête de page intérieure */
-.oli-page-head { padding: 2.5rem 0 2.25rem; border-bottom: var(--oli-rule-heavy); }
+.oli-page-head { padding: 2.5rem 0 2.25rem; border-bottom: var(--oli-rule-heavy); border-image: var(--oli-gradient-accent-h) 1; }
 
 /* ------------------------------------------------------------ Pied ------- */
 
-.oli-footer { background: var(--oli-black); color: var(--oli-grey-300); padding: 3.5rem 0 0; margin-top: 0; }
-.oli-footer a { color: var(--oli-grey-300); }
+.oli-footer { background: var(--oli-gradient-accent-dark); color: var(--oli-white); font-family: var(--oli-display); padding: 3.5rem 0 0; margin-top: 0; }
+.oli-footer a:not(.btn) { color: var(--oli-white); }
 .oli-footer a:hover { color: var(--oli-white); text-decoration: underline; text-underline-offset: 3px; }
 .oli-footer h3 {
   font-size: .6875rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
@@ -622,21 +635,11 @@ figcaption {
 }
 .oli-footer ul { list-style: none; padding: 0; margin: 0; font-size: .875rem; }
 .oli-footer li { margin-bottom: .5rem; }
-.oli-footer__logo-img { height: 32px; width: auto; display: block; }
+.oli-footer__logo-img { height: 128px; width: auto; display: block; }
 .oli-footer__bottom {
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid var(--oli-white);
   margin-top: 3rem; padding: 1.25rem 0;
   font-size: .75rem; color: var(--oli-grey-500);
-}
-
-/* Bandeau « prototype » */
-.oli-protobar {
-  background: var(--oli-grey-100);
-  border-bottom: var(--oli-rule-dark);
-  font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--oli-grey-700);
-  padding: .4375rem 0;
-  text-align: center;
 }
 
 /* Toast de confirmation des formulaires (prototype, sans backend) */
@@ -651,7 +654,7 @@ figcaption {
 }
 
 @media print {
-  .oli-topbar, .oli-nav, .oli-footer, .oli-protobar, .oli-share { display: none !important; }
+  .oli-topbar, .oli-nav, .oli-footer, .oli-share { display: none !important; }
 }
 
 /* Navigation resserrée sur le breakpoint lg (7 rubriques sur une ligne) */
