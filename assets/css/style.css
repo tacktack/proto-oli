@@ -434,9 +434,9 @@ figcaption {
   border-color: var(--oli-black);
 }
 .oli-band-accent .btn-outline-light:hover {
-  background: var(--oli-black);
+  background: var(--oli-violet);
   color: var(--oli-white);
-  border-color: var(--oli-black);
+  border-color: var(--oli-violet);
 }
 
 .oli-band-grey { background: var(--oli-grey-50); }
