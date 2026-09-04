@@ -374,7 +374,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   margin: 2rem 0;
 }
 .oli-quote p {
-  font-family: var(--oli-display);
+  font-family: var(--oli-body);
   font-size: 1.5rem;
   line-height: 1.28;
   font-weight: 600;
@@ -382,7 +382,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   margin: 0 0 .625rem;
   letter-spacing: -.01em;
 }
-.oli-quote footer { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--oli-grey-700); }
+.oli-quote footer { font-family: var(--oli-display); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--oli-grey-700); }
 
 figure { margin: 0 0 1.75rem; }
 figcaption {
