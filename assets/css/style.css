@@ -30,6 +30,7 @@
   --oli-gradient-accent:     linear-gradient(135deg, var(--oli-violet), var(--oli-blue));
   --oli-gradient-accent-dark: linear-gradient(135deg, #6a3fd1, #1a3569);
   --oli-gradient-accent-h:   linear-gradient(90deg, var(--oli-violet), var(--oli-blue));
+  --oli-blue-dark:           color-mix(in srgb, var(--oli-blue) 65%, black);
 
   --oli-display: "Rethink Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --oli-body:    "Spectral", Georgia, "Times New Roman", serif;
@@ -410,7 +411,7 @@ figcaption {
 /* ----------------------------------------------------- Bandes noires ----- */
 
 .oli-band-dark {
-  background: var(--oli-black);
+  background: var(--oli-blue-dark);
   color: var(--oli-white);
 }
 .oli-band-dark .oli-headline,
