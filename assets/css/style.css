@@ -106,7 +106,6 @@ img { max-width: 100%; height: auto; display: block; }
   text-wrap: balance;
 }
 .oli-headline--xxl { font-size: clamp(2.4rem, 5.2vw, 4rem); }
-.oli-headline--accent-bar { padding-top: 1.125rem; position: relative; }
 .oli-headline--xl  { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 .oli-headline--lg  { font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
 .oli-headline--md  { font-size: 1.25rem; line-height: 1.18; }
