@@ -430,8 +430,8 @@ figcaption {
 .oli-band-accent p { color: var(--oli-graphite); }
 .oli-band-accent a:not(.btn) { color: var(--oli-black); }
 .oli-band-accent .btn-outline-light {
-  color: var(--oli-black);
-  border-color: var(--oli-black);
+  color: var(--oli-violet);
+  border-color: var(--oli-violet);
 }
 .oli-band-accent .btn-outline-light:hover {
   background: var(--oli-violet);
