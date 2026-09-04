@@ -378,7 +378,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   font-size: 1.5rem;
   line-height: 1.28;
   font-weight: 600;
-  color: var(--oli-black);
+  color: var(--oli-blue);
   margin: 0 0 .625rem;
   letter-spacing: -.01em;
 }
@@ -602,9 +602,10 @@ figcaption {
 .oli-stat__value {
   font-family: var(--oli-display);
   font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700; line-height: 1; color: var(--oli-black);
+  font-weight: 700; line-height: 1; color: var(--oli-cyan);
 }
 .oli-band-dark .oli-stat__value { color: var(--oli-white); }
+.oli-band-accent .oli-stat__value { color: var(--oli-black); }
 .oli-stat__label { font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--oli-grey-700); margin-top: .5rem; }
 .oli-band-dark .oli-stat__label { color: var(--oli-grey-500); }
 
