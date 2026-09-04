@@ -569,6 +569,9 @@ figcaption {
 
 /* ------------------------------------------------------ Formulaires ------ */
 
+.form-label, .form-control, .form-select, .form-check-label, .form-text, .invalid-feedback {
+  font-family: var(--oli-display);
+}
 .form-label {
   font-size: .6875rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   color: var(--oli-graphite); margin-bottom: .375rem;
