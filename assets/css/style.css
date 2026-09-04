@@ -445,15 +445,15 @@ figcaption {
 /* --------------------------------------------------------- Boutons ------- */
 
 .btn { font-family: var(--oli-display); border-radius: 0; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .75rem; padding: .8125rem 1.5rem; }
-.btn-dark { background: var(--oli-gradient); border: none; }
-.btn-dark:hover { background: var(--oli-gradient-deep); border: none; }
+.btn-dark { background: var(--oli-gradient-accent); border: none; }
+.btn-dark:hover { background: var(--oli-gradient-accent-dark); border: none; }
 .btn-outline-dark {
   border: 1px solid;
-  border-image: var(--oli-gradient) 1;
+  border-image: var(--oli-gradient-accent) 1;
   color: var(--oli-violet);
   background: transparent;
 }
-.btn-outline-dark:hover { background: var(--oli-gradient); color: var(--oli-white); }
+.btn-outline-dark:hover { background: var(--oli-gradient-accent); color: var(--oli-white); }
 .btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-black); }
 .btn-light:hover { background: var(--oli-grey-200); border-color: var(--oli-grey-200); color: var(--oli-black); }
 .btn-outline-light:hover { color: var(--oli-black); }
