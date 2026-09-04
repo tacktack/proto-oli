@@ -460,7 +460,7 @@ figcaption {
   color: var(--oli-white);
 }
 .btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-violet); }
-.btn-light:hover { background: var(--oli-grey-200); border-color: var(--oli-grey-200); color: var(--oli-violet); }
+.btn-light:hover { background: var(--oli-cyan); border-color: var(--oli-cyan); color: var(--oli-violet); }
 .btn-outline-light:hover { color: var(--oli-black); }
 
 .oli-arrow-link {
@@ -659,7 +659,7 @@ figcaption {
 
 .oli-footer { background: var(--oli-gradient-accent-dark); color: var(--oli-white); font-family: var(--oli-display); padding: 3.5rem 0 0; margin-top: 0; }
 .oli-footer a:not(.btn) { color: var(--oli-white); }
-.oli-footer a:hover { color: var(--oli-white); text-decoration: underline; text-underline-offset: 3px; }
+.oli-footer a:not(.btn):hover { color: var(--oli-white); text-decoration: underline; text-underline-offset: 3px; }
 .oli-footer h3 {
   font-size: .6875rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
   color: var(--oli-white); margin: 0 0 1rem;
