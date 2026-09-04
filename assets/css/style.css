@@ -1,7 +1,7 @@
 /* ==========================================================================
    Open Lab Insight — prototype
-   Palette : blanc, noir, gris uniquement. Aucune couleur.
-   Surcharge des variables Bootstrap 5 (voir CLAUDE.md).
+   Palette : blanc, noir, gris + accent (bleu #23458A, cyan/violet en dégradé
+   pour les temps forts). Surcharge des variables Bootstrap 5 (voir CLAUDE.md).
    ========================================================================== */
 
 :root {
@@ -17,33 +17,41 @@
   --oli-grey-50:   #f8f8f8;
   --oli-white:     #ffffff;
 
-  --oli-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --oli-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Accent de marque */
+  --oli-accent:       #23458A;
+  --oli-accent-dark:  #172e5c;
+  --oli-cyan:         #00CDCA;
+  --oli-violet:       #8454F9;
+  --oli-gradient:     linear-gradient(135deg, var(--oli-cyan), var(--oli-violet));
+  --oli-gradient-deep: linear-gradient(135deg, color-mix(in srgb, var(--oli-cyan) 55%, black), color-mix(in srgb, var(--oli-violet) 55%, black));
+
+  --oli-display: "Rethink Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --oli-body:    "Spectral", Georgia, "Times New Roman", serif;
 
   --oli-rule:       1px solid var(--oli-grey-200);
   --oli-rule-dark:  1px solid var(--oli-grey-300);
   --oli-rule-heavy: 3px solid var(--oli-black);
 
-  /* Bootstrap : neutralisation des arrondis et de la couleur d'accent */
+  /* Bootstrap : neutralisation des arrondis, accent de marque */
   --bs-border-radius: 0;
   --bs-border-radius-sm: 0;
   --bs-border-radius-lg: 0;
   --bs-border-radius-xl: 0;
   --bs-border-radius-pill: 0;
-  --bs-body-font-family: var(--oli-sans);
+  --bs-body-font-family: var(--oli-body);
   --bs-body-color: var(--oli-ink);
   --bs-body-bg: var(--oli-white);
   --bs-border-color: var(--oli-grey-200);
-  --bs-primary: #000000;
+  --bs-primary: var(--oli-accent);
   --bs-link-color: var(--oli-ink);
-  --bs-link-hover-color: var(--oli-black);
-  --bs-focus-ring-color: rgba(0, 0, 0, .25);
+  --bs-link-hover-color: var(--oli-accent);
+  --bs-focus-ring-color: rgba(35, 69, 138, .25);
 }
 
 /* --------------------------------------------------------- Base ---------- */
 
 body {
-  font-family: var(--oli-sans);
+  font-family: var(--oli-body);
   color: var(--oli-ink);
   background: var(--oli-white);
   font-size: 1rem;
@@ -52,14 +60,14 @@ body {
 }
 
 a { text-decoration: none; color: inherit; }
-a:hover { color: var(--oli-black); }
+a:hover { color: var(--oli-accent); }
 
 img { max-width: 100%; height: auto; display: block; }
 
-::selection { background: var(--oli-black); color: var(--oli-white); }
+::selection { background: var(--oli-accent); color: var(--oli-white); }
 
 :focus-visible {
-  outline: 2px solid var(--oli-black);
+  outline: 2px solid var(--oli-accent);
   outline-offset: 2px;
 }
 
@@ -67,10 +75,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ------------------------------------------------- Typographie presse ---- */
 
-.oli-serif { font-family: var(--oli-serif); }
+.oli-display { font-family: var(--oli-display); }
 
 .oli-kicker {
-  font-family: var(--oli-sans);
+  font-family: var(--oli-body);
   font-size: .6875rem;
   font-weight: 600;
   letter-spacing: .14em;
@@ -82,7 +90,7 @@ img { max-width: 100%; height: auto; display: block; }
 .oli-kicker--light { color: var(--oli-grey-300); }
 
 .oli-headline {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -.015em;
@@ -91,6 +99,12 @@ img { max-width: 100%; height: auto; display: block; }
   text-wrap: balance;
 }
 .oli-headline--xxl { font-size: clamp(2.4rem, 5.2vw, 4rem); }
+/* Signature dégradée réservée au grand titre « à la une » de l'accueil */
+.oli-headline--accent-bar { padding-top: 1.125rem; position: relative; }
+.oli-headline--accent-bar::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: 46px; height: 4px; background: var(--oli-gradient);
+}
 .oli-headline--xl  { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 .oli-headline--lg  { font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
 .oli-headline--md  { font-size: 1.25rem; line-height: 1.18; }
@@ -104,7 +118,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 }
 
 .oli-standfirst {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-body);
   font-size: 1.0625rem;
   line-height: 1.5;
   color: var(--oli-grey-700);
@@ -161,7 +175,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   flex-wrap: wrap;
 }
 .oli-section-head h2 {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -.01em;
@@ -199,16 +213,8 @@ a:hover .oli-headline, .oli-headline a:hover {
 }
 
 .oli-masthead { padding: 1.5rem 0 1.125rem; text-align: center; }
-.oli-logo {
-  font-family: var(--oli-serif);
-  font-weight: 700;
-  font-size: clamp(1.6rem, 3.6vw, 2.35rem);
-  letter-spacing: .02em;
-  line-height: 1;
-  color: var(--oli-black);
-  display: inline-block;
-}
-.oli-logo span { font-weight: 400; }
+.oli-logo { display: inline-block; }
+.oli-logo__img { height: clamp(34px, 4.4vw, 46px); width: auto; display: block; }
 .oli-tagline {
   font-size: .6875rem;
   letter-spacing: .22em;
@@ -233,15 +239,15 @@ a:hover .oli-headline, .oli-headline a:hover {
   position: relative;
 }
 .oli-nav .nav-item + .nav-item { margin-left: 1.75rem; }
-.oli-nav .nav-link:hover { color: var(--oli-black); }
+.oli-nav .nav-link:hover { color: var(--oli-accent); }
 .oli-nav .nav-link::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -1px;
-  height: 3px; background: var(--oli-black);
+  height: 3px; background: var(--oli-accent);
   transform: scaleX(0); transform-origin: left; transition: transform .18s ease;
 }
 .oli-nav .nav-link:hover::after,
 .oli-nav .nav-link.active::after { transform: scaleX(1); }
-.oli-nav .nav-link.active { color: var(--oli-black); }
+.oli-nav .nav-link.active { color: var(--oli-accent); }
 
 .oli-nav .navbar-toggler {
   border: var(--oli-rule-dark);
@@ -278,7 +284,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 .oli-fil { counter-reset: fil; }
 .oli-fil__item { position: relative; padding-top: .875rem; border-top: var(--oli-rule-heavy); }
 .oli-fil__num {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1;
@@ -291,18 +297,23 @@ a:hover .oli-headline, .oli-headline a:hover {
 
 .oli-edito {
   background: var(--oli-grey-50);
-  border-top: var(--oli-rule-heavy);
+  border-top: 3px solid transparent;
+  position: relative;
   padding: 1.5rem;
+}
+.oli-edito::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--oli-gradient);
 }
 /* Utiliser .h-100 (Bootstrap) uniquement quand le bloc doit remplir sa colonne. */
 .oli-edito__body {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-body);
   font-size: 1rem;
   line-height: 1.62;
   color: var(--oli-graphite);
 }
 .oli-edito__body > p:first-of-type::first-letter {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-weight: 700;
   font-size: 3.4em;
   line-height: .82;
@@ -314,13 +325,14 @@ a:hover .oli-headline, .oli-headline a:hover {
 /* --------------------------------------------------------- Article ------- */
 
 .oli-article__body {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-body);
   font-size: 1.125rem;
   line-height: 1.72;
   color: var(--oli-ink);
 }
 .oli-article__body > p { margin-bottom: 1.375rem; }
 .oli-article__body > p.oli-lede::first-letter {
+  font-family: var(--oli-display);
   font-weight: 700;
   font-size: 3.6em;
   line-height: .82;
@@ -328,14 +340,14 @@ a:hover .oli-headline, .oli-headline a:hover {
   margin: .06em .1em 0 0;
 }
 .oli-article__body h2 {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-size: 1.5rem;
   font-weight: 700;
   margin: 2.5rem 0 1rem;
   letter-spacing: -.01em;
 }
 .oli-article__body h3 {
-  font-family: var(--oli-sans);
+  font-family: var(--oli-body);
   font-size: .8125rem;
   font-weight: 700;
   letter-spacing: .1em;
@@ -353,7 +365,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   margin: 2rem 0;
 }
 .oli-quote p {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-size: 1.5rem;
   line-height: 1.28;
   font-weight: 600;
@@ -395,11 +407,14 @@ figcaption {
 
 .oli-band-grey { background: var(--oli-grey-50); }
 
+/* Bandeau de statistiques : dégradé réservé aux temps forts (usage ponctuel) */
+.oli-band-gradient { background: var(--oli-gradient-deep); }
+
 /* --------------------------------------------------------- Boutons ------- */
 
 .btn { border-radius: 0; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .75rem; padding: .8125rem 1.5rem; }
-.btn-dark { background: var(--oli-black); border-color: var(--oli-black); }
-.btn-dark:hover { background: var(--oli-graphite); border-color: var(--oli-graphite); }
+.btn-dark { background: var(--oli-accent); border-color: var(--oli-accent); }
+.btn-dark:hover { background: var(--oli-accent-dark); border-color: var(--oli-accent-dark); }
 .btn-outline-dark { border-color: var(--oli-black); color: var(--oli-black); }
 .btn-outline-dark:hover { background: var(--oli-black); color: var(--oli-white); }
 .btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-black); }
@@ -409,10 +424,11 @@ figcaption {
 .oli-arrow-link {
   font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
   display: inline-flex; align-items: center; gap: .5rem;
-  border-bottom: 2px solid var(--oli-black);
+  border-bottom: 2px solid var(--oli-accent);
+  color: var(--oli-accent);
   padding-bottom: .25rem;
 }
-.oli-arrow-link:hover { gap: .875rem; }
+.oli-arrow-link:hover { gap: .875rem; color: var(--oli-accent-dark); border-color: var(--oli-accent-dark); }
 .oli-arrow-link { transition: gap .18s ease; }
 
 /* ----------------------------------------------------- Filtres rubrique -- */
@@ -426,8 +442,8 @@ figcaption {
   color: var(--oli-grey-700);
   cursor: pointer;
 }
-.oli-filter:hover { border-color: var(--oli-black); color: var(--oli-black); }
-.oli-filter.is-active { background: var(--oli-black); border-color: var(--oli-black); color: var(--oli-white); }
+.oli-filter:hover { border-color: var(--oli-accent); color: var(--oli-accent); }
+.oli-filter.is-active { background: var(--oli-accent); border-color: var(--oli-accent); color: var(--oli-white); }
 
 /* ----------------------------------------------- Zones d'intégration ----- */
 /* Fonctionnalités attendues en intégration finale — hors périmètre du proto */
@@ -448,7 +464,7 @@ figcaption {
   margin-bottom: .875rem;
 }
 .oli-integration h3 {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-size: 1.25rem; font-weight: 700; color: var(--oli-black);
   margin: 0 0 .5rem;
 }
@@ -513,13 +529,13 @@ figcaption {
   font-size: .9375rem;
 }
 .form-control:focus, .form-select:focus {
-  border-color: var(--oli-black);
+  border-color: var(--oli-accent);
   box-shadow: none;
 }
 .form-control::placeholder { color: var(--oli-grey-500); }
 .form-check-input { border-radius: 0; border-color: var(--oli-grey-500); }
-.form-check-input:checked { background-color: var(--oli-black); border-color: var(--oli-black); }
-.form-check-input:focus { box-shadow: none; border-color: var(--oli-black); }
+.form-check-input:checked { background-color: var(--oli-accent); border-color: var(--oli-accent); }
+.form-check-input:focus { box-shadow: none; border-color: var(--oli-accent); }
 .form-check-label { font-size: .8125rem; color: var(--oli-grey-700); }
 .form-text { font-size: .75rem; color: var(--oli-grey-500); }
 .invalid-feedback { font-size: .75rem; }
@@ -530,7 +546,7 @@ figcaption {
 /* ------------------------------------------------------------ Divers ----- */
 
 .oli-stat__value {
-  font-family: var(--oli-serif);
+  font-family: var(--oli-display);
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700; line-height: 1; color: var(--oli-black);
 }
@@ -539,12 +555,12 @@ figcaption {
 .oli-band-dark .oli-stat__label { color: var(--oli-grey-500); }
 
 .oli-step__num {
-  font-family: var(--oli-serif); font-size: 2.25rem; font-weight: 700; line-height: 1;
+  font-family: var(--oli-display); font-size: 2.25rem; font-weight: 700; line-height: 1;
   color: var(--oli-grey-300); display: block; margin-bottom: .75rem;
 }
 
 .oli-feature { border-top: var(--oli-rule-heavy); padding-top: 1rem; height: 100%; }
-.oli-feature h3 { font-family: var(--oli-serif); font-size: 1.125rem; font-weight: 700; margin: 0 0 .5rem; }
+.oli-feature h3 { font-family: var(--oli-display); font-size: 1.125rem; font-weight: 700; margin: 0 0 .5rem; }
 .oli-feature p { font-size: .9375rem; color: var(--oli-grey-700); margin: 0; }
 
 .oli-offer {
@@ -554,8 +570,8 @@ figcaption {
   display: flex; flex-direction: column;
 }
 .oli-offer--featured { border: 2px solid var(--oli-black); }
-.oli-offer__price { font-family: var(--oli-serif); font-size: 2rem; font-weight: 700; line-height: 1; }
-.oli-offer__price small { font-family: var(--oli-sans); font-size: .75rem; font-weight: 500; color: var(--oli-grey-700); letter-spacing: .04em; }
+.oli-offer__price { font-family: var(--oli-display); font-size: 2rem; font-weight: 700; line-height: 1; }
+.oli-offer__price small { font-family: var(--oli-body); font-size: .75rem; font-weight: 500; color: var(--oli-grey-700); letter-spacing: .04em; }
 .oli-offer ul { list-style: none; padding: 0; margin: 1.25rem 0; font-size: .875rem; }
 .oli-offer li { padding: .5rem 0; border-top: var(--oli-rule); color: var(--oli-graphite); }
 
@@ -570,7 +586,7 @@ figcaption {
 }
 .oli-logo-tile:hover { border-color: var(--oli-black); }
 .oli-logo-tile span {
-  font-family: var(--oli-serif); font-weight: 700; font-size: 1rem;
+  font-family: var(--oli-display); font-weight: 700; font-size: 1rem;
   letter-spacing: .02em; color: var(--oli-grey-500);
 }
 .oli-logo-tile:hover span { color: var(--oli-black); }
@@ -606,7 +622,7 @@ figcaption {
 }
 .oli-footer ul { list-style: none; padding: 0; margin: 0; font-size: .875rem; }
 .oli-footer li { margin-bottom: .5rem; }
-.oli-footer__logo { font-family: var(--oli-serif); font-size: 1.5rem; font-weight: 700; color: var(--oli-white); }
+.oli-footer__logo-img { height: 32px; width: auto; display: block; }
 .oli-footer__bottom {
   border-top: 1px solid #2a2a2a;
   margin-top: 3rem; padding: 1.25rem 0;
