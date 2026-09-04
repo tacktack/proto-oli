@@ -134,6 +134,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 .oli-standfirst--lg { font-size: 1.25rem; }
 
 .oli-byline {
+  font-family: var(--oli-display);
   font-size: .75rem;
   letter-spacing: .04em;
   color: var(--oli-grey-700);
