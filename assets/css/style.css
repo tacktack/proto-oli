@@ -149,6 +149,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
+  object-fit: cover;
 }
 .oli-avatar--lg { width: 56px; height: 56px; font-size: .875rem; }
 
