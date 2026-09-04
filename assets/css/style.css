@@ -106,12 +106,7 @@ img { max-width: 100%; height: auto; display: block; }
   text-wrap: balance;
 }
 .oli-headline--xxl { font-size: clamp(2.4rem, 5.2vw, 4rem); }
-/* Signature dégradée réservée au grand titre « à la une » de l'accueil */
 .oli-headline--accent-bar { padding-top: 1.125rem; position: relative; }
-.oli-headline--accent-bar::before {
-  content: ""; position: absolute; top: 0; left: 0;
-  width: 46px; height: 4px; background: var(--oli-gradient);
-}
 .oli-headline--xl  { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 .oli-headline--lg  { font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
 .oli-headline--md  { font-size: 1.25rem; line-height: 1.18; }
