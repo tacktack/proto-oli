@@ -189,6 +189,7 @@ a:hover .oli-headline, .oli-headline a:hover {
   margin: 0;
 }
 .oli-section-head .oli-more {
+  font-family: var(--oli-display);
   font-size: .75rem;
   font-weight: 600;
   letter-spacing: .08em;
@@ -315,7 +316,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 }
 .oli-edito::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--oli-gradient);
+  background: var(--oli-gradient-accent-h);
 }
 /* Utiliser .h-100 (Bootstrap) uniquement quand le bloc doit remplir sa colonne. */
 .oli-edito__body {
@@ -425,15 +426,21 @@ figcaption {
 /* --------------------------------------------------------- Boutons ------- */
 
 .btn { font-family: var(--oli-display); border-radius: 0; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .75rem; padding: .8125rem 1.5rem; }
-.btn-dark { background: var(--oli-gradient-accent); border-color: transparent; }
-.btn-dark:hover { background: var(--oli-gradient-accent-dark); border-color: transparent; }
-.btn-outline-dark { border-color: var(--oli-black); color: var(--oli-black); }
-.btn-outline-dark:hover { background: var(--oli-black); color: var(--oli-white); }
+.btn-dark { background: var(--oli-gradient); border: none; }
+.btn-dark:hover { background: var(--oli-gradient-deep); border: none; }
+.btn-outline-dark {
+  border: 1px solid;
+  border-image: var(--oli-gradient) 1;
+  color: var(--oli-violet);
+  background: transparent;
+}
+.btn-outline-dark:hover { background: var(--oli-gradient); color: var(--oli-white); }
 .btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-black); }
 .btn-light:hover { background: var(--oli-grey-200); border-color: var(--oli-grey-200); color: var(--oli-black); }
 .btn-outline-light:hover { color: var(--oli-black); }
 
 .oli-arrow-link {
+  font-family: var(--oli-display);
   font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
   display: inline-flex; align-items: center; gap: .5rem;
   border-bottom: 2px solid var(--oli-accent);
@@ -617,7 +624,7 @@ figcaption {
 .oli-file__meta { font-size: .75rem; color: var(--oli-grey-500); letter-spacing: .04em; }
 
 /* Fil d'Ariane */
-.oli-breadcrumb { font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase; color: var(--oli-grey-500); padding: 1rem 0; }
+.oli-breadcrumb { font-family: var(--oli-display); font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase; color: var(--oli-grey-500); padding: 1rem 0; }
 .oli-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .oli-breadcrumb .oli-sep { margin: 0 .5rem; color: var(--oli-grey-300); }
 
