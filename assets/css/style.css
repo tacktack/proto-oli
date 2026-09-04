@@ -419,6 +419,24 @@ figcaption {
 .oli-band-dark p { color: var(--oli-grey-300); }
 .oli-band-dark a:not(.btn) { color: var(--oli-white); }
 
+.oli-band-accent {
+  background: var(--oli-cyan);
+  color: var(--oli-ink);
+}
+.oli-band-accent .oli-headline,
+.oli-band-accent h2, .oli-band-accent h3 { color: var(--oli-black); }
+.oli-band-accent p { color: var(--oli-graphite); }
+.oli-band-accent a:not(.btn) { color: var(--oli-black); }
+.oli-band-accent .btn-outline-light {
+  color: var(--oli-black);
+  border-color: var(--oli-black);
+}
+.oli-band-accent .btn-outline-light:hover {
+  background: var(--oli-black);
+  color: var(--oli-white);
+  border-color: var(--oli-black);
+}
+
 .oli-band-grey { background: var(--oli-grey-50); }
 
 /* Bandeau de statistiques : dégradé réservé aux temps forts (usage ponctuel) */
