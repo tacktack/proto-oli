@@ -387,6 +387,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 figure { margin: 0 0 1.75rem; }
 img.oli-photo--panorama { width: 100%; aspect-ratio: 1600 / 640; object-fit: cover; }
 img.oli-photo--wide { width: 100%; aspect-ratio: 1200 / 675; object-fit: cover; }
+img.oli-photo--cover { width: 100%; aspect-ratio: 1000 / 760; object-fit: cover; }
 figcaption {
   font-size: .75rem;
   line-height: 1.45;
