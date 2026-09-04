@@ -279,7 +279,7 @@ a:hover .oli-headline, .oli-headline a:hover {
 
 .oli-card { display: block; }
 .oli-card__media { display: block; overflow: hidden; background: var(--oli-grey-100); margin-bottom: .875rem; }
-.oli-card__media img { width: 100%; transition: transform .35s ease, filter .35s ease; }
+.oli-card__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .35s ease, filter .35s ease; }
 .oli-card:hover .oli-card__media img { transform: scale(1.03); }
 .oli-card + .oli-card { margin-top: 1.75rem; padding-top: 1.75rem; border-top: var(--oli-rule); }
 
@@ -385,6 +385,8 @@ a:hover .oli-headline, .oli-headline a:hover {
 .oli-quote footer { font-family: var(--oli-display); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--oli-grey-700); }
 
 figure { margin: 0 0 1.75rem; }
+img.oli-photo--panorama { width: 100%; aspect-ratio: 1600 / 640; object-fit: cover; }
+img.oli-photo--wide { width: 100%; aspect-ratio: 1200 / 675; object-fit: cover; }
 figcaption {
   font-size: .75rem;
   line-height: 1.45;
