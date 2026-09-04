@@ -685,7 +685,7 @@ figcaption {
 .oli-footer li { margin-bottom: .5rem; }
 .oli-footer__logo-img { height: 128px; width: auto; display: block; }
 .oli-footer__bottom {
-  border-top: 1px solid var(--oli-white);
+  border-top: 1px solid rgba(255, 255, 255, .2);
   margin-top: 3rem; padding: 1.25rem 0;
   font-size: .75rem; color: var(--oli-white);
 }
