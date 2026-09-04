@@ -402,11 +402,12 @@ figcaption {
 .oli-share a {
   display: inline-flex; align-items: center; justify-content: center;
   width: 36px; height: 36px;
-  border: var(--oli-rule-dark);
+  border: 1px solid var(--oli-violet);
   font-size: .6875rem; font-weight: 700; letter-spacing: .04em;
-  color: var(--oli-graphite);
+  color: var(--oli-violet);
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
 }
-.oli-share a:hover { background: var(--oli-black); color: var(--oli-white); border-color: var(--oli-black); }
+.oli-share a:hover { background: var(--oli-violet); color: var(--oli-white); border-color: var(--oli-violet); }
 
 .oli-share--light a { border-color: var(--oli-white); color: var(--oli-white); }
 
