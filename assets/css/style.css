@@ -462,13 +462,19 @@ figcaption {
   border: 1px solid;
   border-image: var(--oli-gradient-accent) 1;
   color: var(--oli-violet);
-  background: transparent;
+  background-image: linear-gradient(90deg, transparent 0%, transparent 50%, var(--oli-cyan) 50%, var(--oli-violet) 75%, var(--oli-blue) 100%);
+  background-size: 200% 100%;
+  background-position: 0% 0;
+  transition: background-position .5s ease, color .3s ease, border-color .3s ease;
 }
 .btn-outline-dark:hover {
-  background: var(--oli-cyan);
+  background-position: 100% 0;
   border-image: none;
-  border-color: var(--oli-cyan);
+  border-color: transparent;
   color: var(--oli-white);
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-outline-dark { transition: none; }
 }
 .btn-light { background: var(--oli-white); border-color: var(--oli-white); color: var(--oli-accent-dark); }
 .btn-light:hover { background: var(--oli-grey-200); border-color: var(--oli-grey-200); color: var(--oli-accent-dark); }
